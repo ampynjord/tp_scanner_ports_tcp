@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Scan result</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a> | 
+      Logged in as: <strong>{{ session.username }}</strong> | 
+      <a href="/logout">Logout</a>
+    </nav>
+    <div>{{ ipv4 }}</div>
+    <div>{{ port }}</div>
+    <div>{{ result }}</div>
+    <br>
+    <a href="/">New scan</a>
+  </body>
+</html>

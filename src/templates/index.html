@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Port Scanner</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a> | 
+      Logged in as: <strong>{{ session.username }}</strong> | 
+      <a href="/logout">Logout</a>
+    </nav>
+    <div>
+      <h1>Port Scanner</h1>
+      <form method="post" action="/scan" novalidate>
+        <div>
+          <label for="ipv4">IPv4 address</label>
+          <input
+            id="ipv4"
+            name="ipv4"
+            type="text"
+            required
+            placeholder="192.168.0.1"
+            title="Enter a valid IPv4 address (e.g. 192.168.0.1)"
+          />
+        </div>
+
+        <div>
+          <label for="port">Port</label>
+          <input
+            id="port"
+            name="port"
+            type="number"
+            required
+            placeholder="80"
+            title="Enter a port number between 1 and 65535"
+          />
+        </div>
+
+        <div>
+          <button type="submit">Scan</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
